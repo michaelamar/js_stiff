@@ -104,7 +104,14 @@ function typing(){
 	console.log("a key was pressed");
 }
 
+$(".svg").click(function(){
+	addNewItem();
+});
 
+function addNewItem(){
+	$("#form").append("<div class=\"newItem\"> <p class=\"todoitems\"> new item </p> <input type=\"checkbox\"></div>");
+
+}
 
 
 
