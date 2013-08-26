@@ -75,6 +75,7 @@
 
 $(document).ready(function(){
 	count();
+getTimes();
 
 
 });
@@ -109,13 +110,18 @@ $(".svg").click(function(){
 });
 
 function addNewItem(){
-	$("#form").append("<div class=\"newItem\"> <p class=\"todoitems\"> new item </p> <input type=\"checkbox\"></div>");
+	$("#form").append(" <form id=\"form\"> <div class=\"newItem\"> <p class=\"todoitems\">new item</p> <input type=\"checkbox\"> </div> </form>");
 
 }
 
 
-
-
+function getTimes(){
+	d = new Date();
+	var dayOfYear = ((d.getDate().toString()) + "/");
+	var month = ((d.getMonth().toString()) + "/");
+	var year = (d.getFullYear().toString());
+	$(".date").html(dayOfYear + month + year);
+}
 
 
 
